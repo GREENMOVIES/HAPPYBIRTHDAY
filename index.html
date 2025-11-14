@@ -1,4 +1,110 @@
 <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Birthday Adarash 🎉</title>
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: black;
+            color: white;
+            text-align: center;
+        }
+
+        h1 {
+            margin-top: 20px;
+            font-size: 35px;
+            color: #ffcc00;
+            animation: glow 1s infinite alternate;
+        }
+
+        @keyframes glow {
+            from { text-shadow: 0 0 10px #ffcc00; }
+            to { text-shadow: 0 0 20px #ffcc00; }
+        }
+
+        .slideshow {
+            margin-top: 20px;
+        }
+
+        .slideshow img {
+            width: 90%;
+            max-width: 350px;
+            height: auto;
+            border-radius: 20px;
+            box-shadow: 0 0 20px #ffcc00;
+            animation: fade 1.3s;
+        }
+
+        @keyframes fade {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .name {
+            margin-top: 15px;
+            font-size: 28px;
+            color: #00eaff;
+        }
+
+        .music-btn {
+            margin-top: 20px;
+            padding: 10px 24px;
+            border: none;
+            background: #ff0066;
+            color: white;
+            font-size: 18px;
+            border-radius: 10px;
+            cursor: pointer;
+        }
+
+        .music-btn:hover {
+            background: #ff3385;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>🎉 Happy Birthday Bro! 🎉</h1>
+
+    <div class="name">💛 Adarash C (Chandrappan) 💛</div>
+
+    <div class="slideshow">
+        <img id="photo" src="Photo1.jpg" alt="Birthday Photos">
+    </div>
+
+    <button class="music-btn" onclick="playMusic()">Play Music 🎵</button>
+
+    <audio id="song">
+        <source src="https://files.freemusicarchive.org/storage-freemusicarchive-org/music/no_curator/Scott_Holmes_Music/Happy_Music/Scott_Holmes_Music_-_Happy_Walk.mp3" type="audio/mpeg">
+    </audio>
+
+    <script>
+        // YOUR 4 PHOTOS
+        const photos = [
+            "Photo1.jpg",
+            "Photo2.jpg",
+            "Photo3.jpg",
+            "Photo4.jpg"
+        ];
+
+        let i = 0;
+        setInterval(() => {
+            document.getElementById("photo").src = photos[i];
+            i = (i + 1) % photos.length;
+        }, 2500); // photo changes every 2.5 seconds
+
+        function playMusic() {
+            document.getElementById("song").play();
+        }
+    </script>
+
+</body>
+</html><!DOCTYPE html>
 <html>
 <head><title>Happy Birthday!</title></head>
 <body>Test</body>
